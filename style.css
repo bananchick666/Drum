@@ -1,0 +1,179 @@
+:root {
+  --background: url('images/background.jpg') bottom center;
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --main-element-color: rgb(0, 0, 0);
+  --key-background-color: rgba(0, 0, 0, 0.4);
+  --mode-background-image: url('images/sun.svg');
+  --main-color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Balthazar', 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  background: var(--background);
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #283149;
+}
+
+body.light {
+  --background: url('images/background1.jpg') bottom center;
+  --main-element-color: rgb(230, 230, 230);
+  --key-background-color: rgba(230, 230, 230, 0.4);
+  --mode-background-image: url('images/moon.svg');
+  --main-color: rgb(0, 0, 0);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  color: #DBEDF3;
+  font-family: 'Balthazar', 'Roboto', sans-serif;
+  text-shadow: 0 0 0.5rem var(--main-element-color);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  outline: none;
+  border: 0.4rem solid var(--main-element-color);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-family: 'Balthazar', 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2;
+  padding: 1rem 0.5rem;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  color: var(--main-color);
+  background: var(--key-background-color);
+  background-color: white;
+  text-shadow: 0 0 0.5rem var(--main-element-color);
+  transition: all 0.07s ease;
+  display: inline-block;  
+  cursor: pointer;  
+}
+
+.key:hover {
+  border-radius: 3rem;
+  box-shadow: 0 0 2rem var(--main-element-color);  
+  text-shadow: 0 0 2rem var(--main-element-color);
+}
+
+
+.a {
+  background-image: url("images/tom1.png");
+}
+
+.s {
+  background-image: url("images/crash.png");
+}
+
+.d {
+  background-image: url("images/tom3.png");
+}
+
+.f {
+  background-image: url("images/crash.png");
+}
+
+.g {
+  background-image: url("images/snare.png");
+}
+
+.h {
+  background-image: url("images/crash.png");
+}
+
+.j {
+  background-image: url("images/kick.png");
+}
+
+.k {
+  background-image: url("images/tom5.png");
+}
+
+.l {
+  background-image: url("images/tom6.png");
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  text-shadow: 0 0 0.5rem var(--main-element-color);
+  text-transform: uppercase;
+}
+
+.sound {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+  text-transform: uppercase;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+.mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: var(--mode-background-image);
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0 0 0.5rem var(--main-element-color));
+  filter: drop-shadow(0 0 0.5rem var(--main-element-color));
+  cursor: pointer;
+  transition: width 0.3s ease;
+}
+
+.mode:hover {
+  width:50px;
+  -webkit-filter: drop-shadow(0 0 2rem var(--main-element-color));
+  filter: drop-shadow(0 0 2rem var(--main-element-color));
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+

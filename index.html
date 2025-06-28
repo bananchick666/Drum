@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Drum Kit</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">	
+	<link rel="shortcut icon" href="images/drum.ico" type="image/x-icon">	
+</head>
+<body>
+	<header id="header">
+		<h1>Drum 🥁 Kit</h1>
+	</header>
+
+	<main>
+		<div class="keys">
+			<button class="key a" data-key="1">
+				<kbd>A</kbd>
+				<span class="sound">CLAP</span>
+			</button>
+			<button class="key s" data-key="2">
+				<kbd>S</kbd>
+				<span class="sound">HIHAT</span>
+			</button>
+			<button class="key d" data-key="3">
+				<kbd>D</kbd>
+				<span class="sound">KICK</span>
+			</button>
+			<button class="key f" data-key="4">
+				<kbd>F</kbd>
+				<span class="sound">OPENHAT</span>
+			</button>
+			<button class="key g" data-key="5">
+				<kbd>G</kbd>
+				<span class="sound">BOOM</span>
+			</button>
+			<button class="key h" data-key="6">
+				<kbd>H</kbd>
+				<span class="sound">RIDE</span>
+			</button>
+			<button class="key j" data-key="7">
+				<kbd>J</kbd>
+				<span class="sound">SNARE</span>
+			</button>
+			<button class="key k" data-key="8">
+				<kbd>K</kbd>
+				<span class="sound">TOM</span>
+			</button>
+			<button class="key l" data-key="9">
+				<kbd>L</kbd>
+				<span class="sound">TINK</span>
+			</button>      
+		</div>
+
+		<div class="mode"></div>
+
+		<audio data-key="1" src="sounds/clap.wav"></audio>
+		<audio data-key="2" src="sounds/hihat.wav"></audio>
+		<audio data-key="3" src="sounds/kick.wav"></audio>
+		<audio data-key="4" src="sounds/openhat.wav"></audio>
+		<audio data-key="5" src="sounds/boom.wav"></audio>
+		<audio data-key="6" src="sounds/ride.wav"></audio>
+		<audio data-key="7" src="sounds/snare.wav"></audio>
+		<audio data-key="8" src="sounds/tom.wav"></audio>
+		<audio data-key="9" src="sounds/tink.wav"></audio>
+	</main>
+
+	
+
+	<script src="script.js"></script>
+</body>
+</html>
